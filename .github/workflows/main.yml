@@ -1,15 +1,15 @@
-name: "Linting and testing"
+name: 'Linting and testing'
 
 on: push
 
 jobs:
-    linting:
-        runs-on: ubuntu-tatest
-        steps:
-            - uses: actions/checkout@v4
-            - name: install packages
-            run: npm install
-            - name: lint
-            run: npm run lint
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: install packages
+        run: npm install
+      - name: run lint
+        run: npm run lint
 
 
